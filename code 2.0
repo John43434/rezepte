@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+ <html lang="de">
+ <head> 
+    <meta charset="UTF-8"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Odin Recipes</title>
+         
+         <style> 
+         body{ 
+            font-family: Arial, sans-serif; 
+            text-align:center; margin:20px;
+             } 
+             .page{
+                 display:none;
+                  }
+                   .page.active{
+                     display:block;
+                      }
+                       img{
+                         width:400px;
+                          max-width:90%;
+                           border-radius:10px; 
+                           } 
+                           
+                           a{ 
+                            display:block;
+                             margin:10px;
+                             color:blue;
+                              cursor:pointer;
+                               }
+                                </style>
+                                 </head> 
+                                 <body>
+                                    
+                                    <!-- Startseite --> 
+                                    <div id="home" class="page active">
+                                         <h1>Odin Recipes</h1>
+                                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600" 
+                                        alt="Food">
+
+                                         <h2>Rezepte</h2> 
+
+                                         <a onclick="showPage('lasagna')">Lasagna</a>
+                                          <a onclick="showPage('pizza')">Pizza</a>
+                                           <a onclick="showPage('salad')">Salat</a>
+                                         </div>
+                                         
+                                         <!-- Lasagna -->
+                                          <div id="lasagna" class="page">
+                                             <h1>Lasagna</h1>
+                                             
+                                             <img src="https://images.unsplash.com/photo-1619895092538-128341789043?w=600"
+                                              alt="Lasagna">
+                                              
+                                              <h2>Beschreibung</h2>
+                                               <p>Klassische italienische Lasagne mit Hackfleisch und Käse.</p>
+                                               
+                                               #<h2>Zutaten</h2>
+                                                <ul>
+                                                     <li>Lasagneplatten</li>
+                                                      <li>Hackfleisch</li>
+                                                       <li>Tomatensoße</li>
+                                                        <li>Käse</li> 
+                                                    </ul>
+                                                    
+                                                    <h2>Schritte</h2> 
+                                                    <ol>
+                                                         <li>Hackfleisch anbraten.</li> 
+                                                         <li>Soße hinzufügen.</li>
+                                                          <li>Schichten aufbauen.</li> 
+                                                          <li>45 Minuten backen.</li>
+                                                         </ol>
+                                                         
+                                                         <a onclick="showPage('home')">Zurück zur Startseite</a>
+                                                         </div>
+                                                         
+                                                         <!-- Pizza -->
+                                                          <div id="pizza" class="page"> 
+                                                            <h1>Pizza</h1>
+                                                            
+                                                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600" alt="Pizza"> <h2>Beschreibung</h2> <p>Knusprige Pizza mit Tomatensoße und Käse.</p> <h2>Zutaten</h2> <ul> <li>Pizzateig</li> <li>Tomatensoße</li> <li>Mozzarella</li> </ul> <h2>Schritte</h2> <ol> <li>Teig ausrollen.</li> <li>Soße verteilen.</li> <li>Käse darauf geben.</li> <li>Backen.</li> </ol> <a onclick="showPage('home')">Zurück zur Startseite</a> </div> <!-- Salat --> <div id="salad" class="page"> <h1>Salat</h1> <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600"
+                                                                 alt="Salat">
+                                                                 
+                                                                 <h2>Beschreibung</h2>
+                                                                  <p>Frischer gemischter Salat mit Gemüse.</p>
+                                                                  
+                                                                  <h2>Zutaten</h2>
+                                                                   <ul>
+                                                                     <li>Salat</li> 
+                                                                     <li>Tomaten</li>
+                                                                      <li>Gurke</li>
+                                                                       <li>Paprika</li>
+                                                                       </ul>
+                                                                       
+                                                                       <h2>Schritte</h2>
+                                                                        <ol> 
+                                                                            <li>Gemüse waschen.</li> 
+                                                                            <li>Kleinschneiden.</li>
+                                                                             <li>Vermischen.</li>
+                                                                              <li>Servieren.</li> 
+                                                                            </ol>
+                                                                            
+                                                                            <a onclick="showPage('home')">Zurück zur Startseite</a>
+                                                                         </div>
+                                                                         
+                                                                         <script>
+                                                                          function showPage(pageId){
+                                                                             document.querySelectorAll('.page').forEach(page=>{
+                                                                                 page.classList.remove('active');
+                                                                                  });
+                                                                                  
+                                                                                  document.getElementById(pageId).classList.add('active');
+                                                                                   } 
+                                                                                   </script> 
+                                                                                   
+                                                                                </body>
+                                                                                 </html>
