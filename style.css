@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     margin: 20px;
 }
 
@@ -13,7 +12,24 @@ img {
 a {
     display: block;
     margin: 10px;
-    color: blue;
+    color: rgb(0, 0, 255);
     text-decoration: none;
 }
 
+img {
+    width: 60%;
+}
+
+.center {
+    text-align: center;
+}
+
+img {
+    margin-inline: auto;
+}
+
+ul,ol {
+    margin-inline: auto;
+    width:fit-content;
+
+}
